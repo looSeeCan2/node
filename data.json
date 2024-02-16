@@ -1,0 +1,173 @@
+[
+  {
+    "name": "Ryu",
+    "origin": "Japan",
+    "fightingStyle": "Ansatsuken",
+    "birthday": "July 21",
+    "weight": "85 kg",
+    "height": "175 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Chun-Li",
+    "origin": "China",
+    "fightingStyle": "Chinese Martial Arts",
+    "birthday": "March 1",
+    "weight": "53 kg",
+    "height": "165 cm",
+    "gender": "Female"
+  },
+  {
+    "name": "Ken",
+    "origin": "United States",
+    "fightingStyle": "Ansatsuken",
+    "birthday": "February 14",
+    "weight": "83 kg",
+    "height": "175 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Guile",
+    "origin": "United States",
+    "fightingStyle": "Military Martial Arts",
+    "birthday": "December 23",
+    "weight": "97 kg",
+    "height": "182 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Zangief",
+    "origin": "Russia",
+    "fightingStyle": "Wrestling",
+    "birthday": "June 1",
+    "weight": "158 kg",
+    "height": "214 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Dhalsim",
+    "origin": "India",
+    "fightingStyle": "Yoga",
+    "birthday": "November 22",
+    "weight": "48 kg",
+    "height": "176 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "M. Bison",
+    "origin": "Unknown",
+    "fightingStyle": "Psycho Power",
+    "birthday": "Unknown",
+    "weight": "102 kg",
+    "height": "182 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Sagat",
+    "origin": "Thailand",
+    "fightingStyle": "Muay Thai",
+    "birthday": "July 2",
+    "weight": "78 kg",
+    "height": "226 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Vega",
+    "origin": "Spain",
+    "fightingStyle": "Spanish Ninjutsu",
+    "birthday": "January 27",
+    "weight": "72 kg",
+    "height": "186 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Balrog",
+    "origin": "United States",
+    "fightingStyle": "Boxing",
+    "birthday": "September 4",
+    "weight": "102 kg",
+    "height": "198 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Cammy",
+    "origin": "United Kingdom",
+    "fightingStyle": "Special Forces Training",
+    "birthday": "January 6",
+    "weight": "46 kg",
+    "height": "164 cm",
+    "gender": "Female"
+  },
+  {
+    "name": "Akuma",
+    "origin": "Japan",
+    "fightingStyle": "Satsui no Hado",
+    "birthday": "Unknown",
+    "weight": "80 kg",
+    "height": "178 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Blanka",
+    "origin": "Brazil",
+    "fightingStyle": "Feral Movement, Electric Attacks",
+    "birthday": "February 12",
+    "weight": "98 kg",
+    "height": "192 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "E. Honda",
+    "origin": "Japan",
+    "fightingStyle": "Sumo Wrestling",
+    "birthday": "November 3",
+    "weight": "137 kg",
+    "height": "185 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Fei Long",
+    "origin": "Hong Kong",
+    "fightingStyle": "Jeet Kune Do",
+    "birthday": "April 23",
+    "weight": "60 kg",
+    "height": "172 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Dee Jay",
+    "origin": "Jamaica",
+    "fightingStyle": "Kickboxing",
+    "birthday": "October 31",
+    "weight": "92 kg",
+    "height": "184 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "T. Hawk",
+    "origin": "Mexico",
+    "fightingStyle": "Native American Wrestling",
+    "birthday": "July 21",
+    "weight": "162 kg",
+    "height": "230 cm",
+    "gender": "Male"
+  },
+  {
+    "name": "Juri",
+    "origin": "South Korea",
+    "fightingStyle": "Taekwondo",
+    "birthday": "January 1",
+    "weight": "46 kg",
+    "height": "165 cm",
+    "gender": "Female"
+  },
+  {
+    "name": "Karin",
+    "origin": "Japan",
+    "fightingStyle": "Kanzuki-ryu Kakutojutsu",
+    "birthday": "September 15",
+    "weight": "48 kg",
+    "height": "162 cm",
+    "gender": "Female"
+  }
+]
