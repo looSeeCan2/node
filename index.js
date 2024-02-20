@@ -119,20 +119,103 @@ const main = async () => {
   // };
   // greeting3(100);
 
-  let a = 30,
-    b = 10;
+  ///CHATGPT LESSONS
+  ///Swap two variables without using a temp variable
+  let x = 25,
+    y = 90;
 
-  console.log(a, b);
+  console.log(x, y);
 
-  a = a + b;
-  console.log(a, b);
+  x += y;
+  console.log(x, y);
+  y = x - y;
+  console.log(x, y);
+  x -= y;
+  console.log(x, y);
 
-  b = a - b;
-  console.log(a, b);
+  ///Try with 3
+  let a = 11,
+    b = 55,
+    c = 23; ///expected out put (11, 55, 23) = (23, 11, 55)
 
-  a = a - b;
+  a += b + c;
+  console.log(a, b, c);
+  b = a - b - c;
+  console.log(a, b, c);
+  c = a - b - c;
+  console.log(a, b, c);
+  a = a - b - c;
+  console.log(a, b, c);
 
-  console.log(a, b);
+  ///Try with strings
+  let string = "red",
+    string2 = "blue";
+
+  console.log(string, string2);
+
+  // Swap the values of a and b.
+  [string, string2] = [string2, string];
+
+  console.log(string, string2);
+
+  ///Find the average of three numbers and store it in a varable
+  const num1 = 10,
+    num2 = 20,
+    num3 = 30;
+
+  let average = (num1 + num2 + num3) / 3;
+  console.log(average);
+
+  ///Swap using array deconstructoring
+  let num4 = 78,
+    num5 = 2,
+    num6 = 88;
+
+  [num4, num5, num6] = [num6, num4, num5];
+  console.log(num4, num5, num6);
+
+  ///Given an integral number, determine if it is a perfect square
+  function isSquare(n) {
+    const square = Math.sqrt(n); ///squares the number
+    console.log(square);
+    if (Number.isInteger(square)) {
+      ///if the number is an integer
+      return true; ///if the number is an integer then it is true that the number passed in is a perfect square
+    } else {
+      return false;
+    }
+  }
+
+  const e = isSquare(8);
+  console.log(e);
+
+  ///I want to replicate^ without using methods
+  function isSquare1(n) {
+    console.log(n);
+    for (let i = 0; i ** 2 <= n; i++) {
+      if (i ** 2 === n) {
+        return `${i} squared = ${n}`;
+      }
+    }
+    return "false";
+  }
+  const f = isSquare1(81);
+  console.log(f);
+
+  ///sort a given array. no methods or functions
+
+  let numArr = [50, 20, 100, 3, 4];
+
+  for (let i = 0; i < numArr.length; i++) {
+    for (let j = 0; j < numArr.length; j++) {
+      if (numArr[i] < numArr[j]) {
+        let newNum = numArr[i];
+        numArr[i] = numArr[j];
+        numArr[j] = newNum;
+      }
+    }
+    console.log(numArr);
+  }
 };
 
 main();
