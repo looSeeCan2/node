@@ -204,14 +204,25 @@ const main = async () => {
 
   ///sort a given array. no methods or functions
 
-  let numArr = [50, 20, 100, 3, 4];
+  let numArr = [];
+  for (let i = 0; i < 5; i++) {
+    const ranNum = Math.floor(Math.random() * 69 + 1);
+    console.log(ranNum);
+    numArr.push(ranNum);
+  }
+
+  console.log(numArr);
 
   for (let i = 0; i < numArr.length; i++) {
     for (let j = 0; j < numArr.length; j++) {
       if (numArr[i] < numArr[j]) {
-        let newNum = numArr[i];
-        numArr[i] = numArr[j];
-        numArr[j] = newNum;
+        numArr[i] = numArr[i] + numArr[j];
+        numArr[j] = numArr[i] - numArr[j];
+        numArr[i] = numArr[i] - numArr[j];
+
+        // let newNum = numArr[i];
+        // numArr[i] = numArr[j];
+        // numArr[j] = newNum;
       }
     }
     console.log(numArr);
