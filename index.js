@@ -227,6 +227,94 @@ const main = async () => {
     }
     console.log(numArr);
   }
+
+  ///////
+
+  {
+    // Challenge 1: Fibonacci Sequence
+    // Initialize three variables: a with a value of 0, b with a value of 1, and temp with a value of 0.
+    // Without using loops or recursion, perform three steps of the Fibonacci sequence. After each step, a should have the value of the next Fibonacci number. Hint: You'll need to use temp to hold a value temporarily during each step.
+
+    ///I used a loop
+    ///Fibonacci Sequence. 0112358.....
+    let a = 0,
+      b = 1,
+      temp = 0;
+    console.log(a, b, temp);
+
+    for (let i = 0; i < 10; i++) {
+      temp = a + b;
+      a = b;
+      b = temp;
+      console.log(a, b, temp);
+    }
+  }
+
+  {
+    ///Reversing a Three-Digit Integer
+    // Given a three-digit integer num (for example, 123), reverse its digits using only mathematical operations. You should not convert num to a string or use any string manipulation methods.
+
+    let num = 687;
+
+    ///calculate the last digit
+    let lastDigit = num % 10; ///using modulo
+    console.log("lastDigit", lastDigit);
+
+    ///calculate middle digit
+    let middleDigit = ((num % 100) - lastDigit) / 10; /// example: ((67) - lastDigit) / 10 => 6
+    console.log("middleDigit", middleDigit);
+
+    ///calculate first digit
+    let firstDigit2 = (num - (num % 100)) / 100;
+    console.log("firsDigit", firstDigit2);
+
+    ///I have the the three digits separated. I have to do some arrithmetic
+
+    let solution = lastDigit * 100 + middleDigit * 10 + firstDigit2;
+    console.log(solution);
+  }
+
+  {
+    ///what if the amount of digits is unknown
+    ///generate a random number that has a random amount of digits
+    let numForRanDigits = Math.floor(Math.random() * 10000) + 1;
+    console.log("numForRanDigits", numForRanDigits);
+
+    // let lastDigit = numForRanDigits % 10; ///get the last digit
+    // console.log("lastDigit", lastDigit);
+
+    // let restOfDigits = numForRanDigits * 0.1 - lastDigit * 0.1;
+    // console.log("restOfDigits", restOfDigits);
+
+    // let lastDigit2 = restOfDigits % 10;
+    // console.log("lastDigit2", lastDigit2);
+
+    // let restOfDigits2 = restOfDigits * 0.1 - lastDigit2 * 0.1;
+    // console.log("restOfDigits2", restOfDigits2);
+
+    // let lastDigit3 = restOfDigits2 % 10;
+    // console.log("lastDigit3", lastDigit3);
+
+    // let restOfDigits3 = restOfDigits2 * 0.1 - lastDigit3 * 0.1;
+    // console.log("restOfDigits3", restOfDigits3);
+
+    // let lastDigit4 = restOfDigits3 / 10;
+    // console.log("lastDigit4", lastDigit4);
+
+    for (let i = 0; i < 15; i++) {
+      if (numForRanDigits / 10 < 1) {
+        console.log(
+          "This number is less than one digit, because when it is divided by 10 it = less than 1"
+        );
+      } else {
+        console.log("This number is more than 1 digit");
+        let lastDigit = numForRanDigits % 10;
+        console.log(lastDigit);
+        numForRanDigits = numForRanDigits * 0.1 - lastDigit * 0.1;
+        console.log(numForRanDigits);
+      }
+    }
+  }
 };
 
 main();
