@@ -277,32 +277,41 @@ const main = async () => {
   {
     ///what if the amount of digits is unknown
     ///generate a random number that has a random amount of digits
-    let numForRanDigits = Math.floor(Math.random() * 10000) + 1;
-    console.log("numForRanDigits", numForRanDigits);
+    let ranNum = Math.floor(Math.random() * 10000) + 1;
+    console.log("ranNum", ranNum);
 
-    let lastDigit;
     let final = 0;
     for (let i = 0; i < 15; i++) {
-      console.log("i", 10 ** i);
-      if (numForRanDigits / 10 < 1) {
-        lastDigit = numForRanDigits % 10;
-        final = final + lastDigit * 10 ** i;
-        console.log(final);
-        console.log(
-          "This number is less than one digit, because when it is divided by 10 it = less than 1"
-        );
+      let lastDigit = ranNum % 10;
+      if (ranNum / 10 < 1) {
+        console.log("This is the place value of the first digit");
+        final = final * 10 + lastDigit;
+        console.log("final", final);
+
         break;
       } else {
-        console.log("This number is more than 1 digit");
-        lastDigit = numForRanDigits % 10;
         console.log("lastDigit", lastDigit);
-        final = final + lastDigit * 10 ** i;
-        console.log("final", final);
-        numForRanDigits = numForRanDigits * 0.1 - lastDigit * 0.1;
-
-        console.log("numForRanDigits", numForRanDigits);
+        ranNum = ranNum / 10 - lastDigit * 0.1;
+        console.log("ranNum", ranNum);
+        final = final * 10 + lastDigit;
       }
     }
+  }
+
+  {
+    let ranNum = Math.floor(Math.random() * 10000) + 1;
+    console.log("Original number:", ranNum);
+
+    let final = 0;
+
+    while (ranNum > 0) {
+      let lastDigit = ranNum % 10; // Get the last digit
+      final = final * 10 + lastDigit; // Shift final to the left and add lastDigit
+      // ranNum = Math.floor(ranNum / 10); // Remove the last digit from ranNum
+      ranNum = ranNum * 0.1 - lastDigit * 0.1;
+    }
+
+    console.log("Reversed number:", final);
   }
 };
 
