@@ -280,38 +280,27 @@ const main = async () => {
     let numForRanDigits = Math.floor(Math.random() * 10000) + 1;
     console.log("numForRanDigits", numForRanDigits);
 
-    // let lastDigit = numForRanDigits % 10; ///get the last digit
-    // console.log("lastDigit", lastDigit);
-
-    // let restOfDigits = numForRanDigits * 0.1 - lastDigit * 0.1;
-    // console.log("restOfDigits", restOfDigits);
-
-    // let lastDigit2 = restOfDigits % 10;
-    // console.log("lastDigit2", lastDigit2);
-
-    // let restOfDigits2 = restOfDigits * 0.1 - lastDigit2 * 0.1;
-    // console.log("restOfDigits2", restOfDigits2);
-
-    // let lastDigit3 = restOfDigits2 % 10;
-    // console.log("lastDigit3", lastDigit3);
-
-    // let restOfDigits3 = restOfDigits2 * 0.1 - lastDigit3 * 0.1;
-    // console.log("restOfDigits3", restOfDigits3);
-
-    // let lastDigit4 = restOfDigits3 / 10;
-    // console.log("lastDigit4", lastDigit4);
-
+    let lastDigit;
+    let final = 0;
     for (let i = 0; i < 15; i++) {
+      console.log("i", 10 ** i);
       if (numForRanDigits / 10 < 1) {
+        lastDigit = numForRanDigits % 10;
+        final = final + lastDigit * 10 ** i;
+        console.log(final);
         console.log(
           "This number is less than one digit, because when it is divided by 10 it = less than 1"
         );
+        break;
       } else {
         console.log("This number is more than 1 digit");
-        let lastDigit = numForRanDigits % 10;
-        console.log(lastDigit);
+        lastDigit = numForRanDigits % 10;
+        console.log("lastDigit", lastDigit);
+        final = final + lastDigit * 10 ** i;
+        console.log("final", final);
         numForRanDigits = numForRanDigits * 0.1 - lastDigit * 0.1;
-        console.log(numForRanDigits);
+
+        console.log("numForRanDigits", numForRanDigits);
       }
     }
   }
