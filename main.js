@@ -17,32 +17,23 @@ const main = async () => {
   // setTimeout(() => {
   //   console.log("Hello after 4 seconds");
   // }, 4000);
-
   // ///does the same as the above
   // const lucycan = (who) => console.log(`${who} rocks😊`);
   // setTimeout(lucycan, 4000, "Lucycan");
-
   ///challenge1
-
   // const theOneFunc = (item1) => {
   //   console.log(item1);
   // };
-
   // setTimeout(theOneFunc, 4000, "Hello after 4 seconds.");
   // setTimeout(theOneFunc, 8000, "Hello after 8 seconds.");
-
   // setInterval(() => {
   //   console.log("Hello every 3 seconds");
   // }, 3000);
-
   // const lucycan1 = (item1) => {
   //   console.log(item1);
   // };
-
   // setInterval(lucycan1, 3000, "Lucycan every 3 sec");
-
   ///challenge2
-
   // let counter = 0;
   // const intervalid = setInterval(() => {
   //   if (counter < 5) {
@@ -53,34 +44,25 @@ const main = async () => {
   //     console.log("Done");
   //   }
   // }, 1000);
-
   ////////////////// 9-more-challenges.txt
-
   ///Challenge 1
   ///Solution from ChatGpt
-
   // function helloWorldIncrementally() {
   //   const greeting = `Hello World ${count} ${delay}`;
   //   console.log(greeting);
   //   count++;
   //   delay += 1000;
-
   //   setTimeout(helloWorldIncrementally, delay); ///recursive pattern
   // }
-
   // helloWorldIncrementally();
-
   ///Solution from exercise files
-
   // const greeting = (delay) => {
   //   setTimeout(() => {
   //     console.log(`Hello World. ${delay}`);
   //     greeting(delay + 1);
   //   }, delay * 1000);
   // };
-
   // greeting(1);
-
   //////////////
   // let count = 1;
   // const greeting = () => {
@@ -88,11 +70,8 @@ const main = async () => {
   //   count++;
   //   count <= 10 ? greeting() : console.log("count is greater than 10");
   // };
-
   // greeting();
-
   ///Challenge 2
-
   // const greeting2 = (delay) => {
   //   setTimeout(() => {
   //     for (let i = 0; i < 5; i++) {
@@ -101,9 +80,7 @@ const main = async () => {
   //     greeting2((delay += 100));
   //   }, delay);
   // };
-
   // greeting2(100);
-
   // let lastIntervalid,
   //   counter = 5;
   // const greeting3 = (delay) => {
@@ -118,7 +95,6 @@ const main = async () => {
   //   counter += 1;
   // };
   // greeting3(100);
-
   ///CHATGPT LESSONS
   ///Swap two variables without using a temp variable
   let x = 25,
@@ -203,39 +179,35 @@ const main = async () => {
   console.log(f);
 
   ///sort a given array. no methods or functions
-  {
-    let numArr = [];
-    for (let i = 0; i < 5; i++) {
-      const ranNum = Math.floor(Math.random() * 69 + 1);
-      console.log(ranNum);
-      numArr.push(ranNum);
-    }
+  let numArr = [];
+  for (let i = 0; i < 5; i++) {
+    const ranNum = Math.floor(Math.random() * 69 + 1);
+    console.log(ranNum);
+    numArr.push(ranNum);
+  }
 
-    console.log(numArr);
+  console.log(numArr);
 
-    for (let i = 0; i < numArr.length; i++) {
-      for (let j = 0; j < numArr.length; j++) {
-        if (numArr[i] < numArr[j]) {
-          numArr[i] = numArr[i] + numArr[j];
-          numArr[j] = numArr[i] - numArr[j];
-          numArr[i] = numArr[i] - numArr[j];
+  for (let i = 0; i < numArr.length; i++) {
+    for (let j = 0; j < numArr.length; j++) {
+      if (numArr[i] < numArr[j]) {
+        numArr[i] = numArr[i] + numArr[j];
+        numArr[j] = numArr[i] - numArr[j];
+        numArr[i] = numArr[i] - numArr[j];
 
-          // let newNum = numArr[i];
-          // numArr[i] = numArr[j];
-          // numArr[j] = newNum;
-        }
+        // let newNum = numArr[i];
+        // numArr[i] = numArr[j];
+        // numArr[j] = newNum;
       }
-      console.log(numArr);
     }
+    console.log(numArr);
   }
 
   ///////
-
   {
     // Challenge 1: Fibonacci Sequence
     // Initialize three variables: a with a value of 0, b with a value of 1, and temp with a value of 0.
     // Without using loops or recursion, perform three steps of the Fibonacci sequence. After each step, a should have the value of the next Fibonacci number. Hint: You'll need to use temp to hold a value temporarily during each step.
-
     ///I used a loop
     ///Fibonacci Sequence. 0112358.....
     let a = 0,
@@ -254,7 +226,6 @@ const main = async () => {
   {
     ///Reversing a Three-Digit Integer
     // Given a three-digit integer num (for example, 123), reverse its digits using only mathematical operations. You should not convert num to a string or use any string manipulation methods.
-
     let num = 687;
 
     ///calculate the last digit
@@ -270,7 +241,6 @@ const main = async () => {
     console.log("firsDigit", firstDigit2);
 
     ///I have the the three digits separated. I have to do some arrithmetic
-
     let solution = lastDigit * 100 + middleDigit * 10 + firstDigit2;
     console.log(solution);
   }
@@ -308,6 +278,7 @@ const main = async () => {
     while (ranNum > 0) {
       let lastDigit = ranNum % 10; // Get the last digit
       final = final * 10 + lastDigit; // Shift final to the left and add lastDigit
+
       // ranNum = Math.floor(ranNum / 10); // Remove the last digit from ranNum
       ranNum = ranNum * 0.1 - lastDigit * 0.1;
     }
@@ -424,37 +395,11 @@ const main = async () => {
     }
     console.log(ranArr);
   }
-  {
-    let numArr = [];
-    for (let i = 0; i < 5; i++) {
-      const ranNum = Math.floor(Math.random() * 69 + 1);
-      numArr.push(ranNum);
-    }
-    console.log("numArr", numArr);
 
-    for (let i = 0; i < numArr.length; i++) {
-      // console.log({ i });
-      for (let j = 0; j < numArr.length; j++) {
-        // console.log({ i, j });
-        if (numArr[i] < numArr[j]) {
-          let temp = numArr[i];
-          numArr[i] = numArr[j];
-          numArr[j] = temp;
-        }
-        // console.table(numArr);
-      }
-    }
-    for (let i = 0; i < numArr.length; i++) {
-      for (let j = 0; j < numArr.length; j++) {
-        if (numArr[i] > numArr[j]) {
-          let temp = numArr[i];
-          numArr[i] = numArr[j];
-          numArr[j] = temp;
-          console.log("numArr", numArr);
-        }
-      }
+  for (let i = 0; i < numArr.length; i++) {
+    console.log({ i });
+    for (let j = 0; j < numArr.length; j++) {
+      console.log({ j });
     }
   }
 };
-
-main();
