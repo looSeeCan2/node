@@ -348,89 +348,14 @@ const main = async () => {
   }
 
   {
-    let m = 5,
-      n = 8;
-    console.log({ m, n });
-    let temp;
+    // let numArr = [];
+    // for (let i = 0; i < 5; i++) {
+    //   const ranNum = Math.floor(Math.random() * 69 + 1);
+    //   numArr.push(ranNum);
+    // }
+    // console.log("numArr", numArr);
 
-    temp = m;
-    m = n;
-    n = temp;
-    console.log({ m, n });
-
-    let ranArr = [51, 10, 3, 0, 9];
-    console.log(ranArr);
-
-    if (ranArr[0] < ranArr[0]) {
-      console.log(true);
-    } else {
-      console.log(false);
-      let temp = ranArr[0];
-      ranArr[0] = ranArr[0];
-      ranArr[0] = ranArr[0];
-      ranArr[0] = temp;
-    }
-
-    console.log(ranArr);
-    if (ranArr[0] < ranArr[1]) {
-      console.log(true);
-    } else {
-      console.log(false);
-      let temp = ranArr[0];
-      ranArr[0] = ranArr[1];
-      ranArr[1] = temp;
-    }
-    console.log(ranArr);
-
-    if (ranArr[0] < ranArr[2]) {
-      console.log(true);
-    } else {
-      console.log(false);
-      let temp = ranArr[0];
-      ranArr[0] = ranArr[2];
-      ranArr[2] = temp;
-    }
-    console.log(ranArr);
-
-    if (ranArr[0] < ranArr[3]) {
-      console.log(true);
-    } else {
-      console.log(false);
-      let temp = ranArr[0];
-      ranArr[0] = ranArr[3];
-      ranArr[3] = temp;
-    }
-    console.log(ranArr);
-
-    if (ranArr[0] < ranArr[4]) {
-      console.log(true);
-    } else {
-      console.log(false);
-      let temp = ranArr[0];
-      ranArr[0] = ranArr[4];
-      ran[4] = temp;
-    }
-    console.log(ranArr);
-
-    ///ranArr[1]
-    console.log(ranArr[1] < ranArr[0]);
-    if (ranArr[1] < ranArr[0]) {
-      console.log(true);
-    } else {
-      console.log(false);
-      let temp = ranArr[1];
-      ranArr[1] = ranArr[0];
-      ranArr[0] = temp;
-    }
-    console.log(ranArr);
-  }
-  {
-    let numArr = [];
-    for (let i = 0; i < 5; i++) {
-      const ranNum = Math.floor(Math.random() * 69 + 1);
-      numArr.push(ranNum);
-    }
-    console.log("numArr", numArr);
+    let numArr = [10, 50, 23, 65, 7];
 
     for (let i = 0; i < numArr.length; i++) {
       // console.log({ i });
@@ -441,9 +366,11 @@ const main = async () => {
           numArr[i] = numArr[j];
           numArr[j] = temp;
         }
-        // console.table(numArr);
+        console.table(numArr);
       }
     }
+
+    ///this one sorts it descending -largest to smallest
     for (let i = 0; i < numArr.length; i++) {
       for (let j = 0; j < numArr.length; j++) {
         if (numArr[i] > numArr[j]) {
@@ -452,6 +379,47 @@ const main = async () => {
           numArr[j] = temp;
           console.log("numArr", numArr);
         }
+      }
+    }
+
+    {
+      ///chatGPt
+      console.log("/////////////////////////////////");
+      let numArr = [];
+      for (let i = 0; i < 5; i++) {
+        const ranNum = Math.floor(Math.random() * 69 + 1);
+        numArr.push(ranNum);
+      }
+      console.log("numArr", numArr);
+
+      for (let i = 0; i < numArr.length; i++) {
+        for (let j = 0; j < numArr.length - i - 1; j++) {
+          console.log({ j });
+        }
+      }
+    }
+
+    {
+      ///reverse
+      console.log("/////////////////////////////////");
+      let numArr = [];
+      for (let i = 0; i < 5; i++) {
+        const ranNum = Math.floor(Math.random() * 69 + 1);
+        numArr.push(ranNum);
+      }
+      console.log("numArr", numArr);
+      ///reverse
+      for (let i = numArr.length - 1; i >= 0; i--) {
+        console.log(i);
+      }
+    }
+  }
+
+  {
+    for (let i = 0; i < 5; i++) {
+      console.log({ i });
+      for (let j = 0; j < i; j++) {
+        console.log({ j });
       }
     }
   }
